@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-weight: bold;
+    font-family: arial;
+}
+
+body{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100vw;
+    overflow: hidden;
+    overflow-x: auto;
+    background-color: rgb(231, 231, 231);
+}
+.navbar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    background-color: aquamarine;
+    height: 40px;
+    transition: all 0.5s;
+    border-bottom: 1px solid black;
+}
+.sidebar{
+    background-color: aquamarine;
+    position: fixed;
+    top: 0;
+    left: -200px;
+    bottom: 0;
+    width: 200px;
+    border-right: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 5px;
+    transition: all 0.5s;
+}
+.logobox{
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+}
+.logo{
+    aspect-ratio: 1/1;
+    width: 50%;
+}
+
+.navbtn{
+    border: none;
+    background-color: transparent;
+    font-weight: bolder;
+    font-size: 1rem;
+    color: darkslategrey;
+    border: 1px solid transparent;
+}
+
+.navbtn:hover{
+    border-color:darkslategrey;
+}
+
+.navbtn:active{
+    background-color: darkcyan;
+}
+
+#menu:checked ~ .navbar{
+    left: 200px;
+}
+
+#menu:checked ~ .sidebar{
+    left: 0px;
+}
+
+#menu:checked ~ main{
+    margin-left: 200px;
+}
+
+main{
+    transition: margin-left 0.5s;
+    margin-top: 40px;
+    margin-left: 0px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100vw;
+    height: 100vh;
+}
+
+.top{
+    width: clamp(fit-content,100%,100%);
+    height: clamp(fit-content,100%,100%);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.infobox{
+    min-width: 100px;
+    box-shadow: 0 0 5px rgba(0,0,0,1);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.hadir{
+    background-color: rgb(75, 192, 192);
+}
+.absen{
+    background-color: rgb(255, 99, 132);
+}
+.izin{
+    background-color: rgb(255, 205, 86);
+}
+.infobox-top{
+    flex: 3;
+    display: flex;
+    gap: 5px;
+    padding: 5px;
+    width: 100%;
+    height: 100%;
+}
+
+.icon{
+    width: 50%;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-img{
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+
+.count{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    font-size: 5vw;
+    color: white;
+}
+
+.infobox-bot{
+    border-top: 2px solid white;
+    padding: 5px;
+    flex: 1;
+    color: white;
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    min-width: max-content;
+    gap: 0px;
+}
+
+.bot{
+    background-color: white;
+    border: 2px solid black;
+    border-bottom: none;
+    border-right: none;
+    width: 100%;
+    height: fit-content;
+    overflow-x: auto;
+}
+
+.box{
+    display: flex;
+    flex-direction: row;
+}
+
+.no{
+    width: 20px;
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+    display: flex;
+    justify-content: center;
+}
+
+.name{
+    flex: 4;
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+}
+
+.time{ 
+    flex: 2;
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+}
+
+.status{
+    min-width: 60px;
+    flex: 1;
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+}
+
+.chartbox{
+    box-shadow: 0 0 5px rgba(0,0,0,1);
+    height: 100%;
+    display: flex;
+}
+.boxtotal{
+    background-color: rgb(54, 162, 235);
+    box-shadow: 0 0 5px rgba(0,0,0,1);
+    flex: 1;
+    display: flex;
+    padding: 10px;
+    color: white;
+}
+.totalcount{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+}
+.totalicon{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.tengah{
+    flex: 2;
+    display: flex;
+}
+.bawah{
+    flex: 1;
+    border-top: 1px solid;
+    padding-top: 10px;
+    display: flex;
+}
+.kiri{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+.kanan{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.detail{
+    height: 50vh;
+}
