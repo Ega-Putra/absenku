@@ -6,7 +6,7 @@ import path from 'path'
 
 const __dirname = path.resolve()
 const app = express()
-const port = 3000
+const PORT = process.env.PORT || 5000
 
 app.use(express.json())
 app.use(express.static(path.join(__dirname, 'frontend')))
@@ -68,7 +68,7 @@ app.get("/data", async (req, res) => {
     }
 })
 
-app.listen(port,() => {
+app.listen(PORT,() => {
     connectDB()
     console.log(`server running at http://localhost:${port}`)
 })
